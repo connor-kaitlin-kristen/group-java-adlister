@@ -1,4 +1,7 @@
-USE adlister_db;
+DROP DATABASE IF EXISTS hexlister_db;
+CREATE DATABASE IF NOT EXISTS hexlister_db;
+
+use hexlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
