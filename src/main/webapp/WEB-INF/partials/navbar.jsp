@@ -1,5 +1,6 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
+
+<nav class="w-full bg-gray-800">
+    <div class="">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
@@ -9,5 +10,4 @@
             <li><a href="/logout">Logout</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
 </nav>

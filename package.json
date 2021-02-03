@@ -1,0 +1,26 @@
+{
+  "name": "group-java-adlister",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/main/webapp/css/index.css -o src/main/webapp/assets/css/tailwind.css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connor-kaitlin-kristen/group-java-adlister.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connor-kaitlin-kristen/group-java-adlister/issues"
+  },
+  "homepage": "https://github.com/connor-kaitlin-kristen/group-java-adlister#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
