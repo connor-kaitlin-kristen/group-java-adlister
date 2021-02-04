@@ -15,6 +15,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<h1>Here is a single ad.</h1>
 
 </body>
 </html>
