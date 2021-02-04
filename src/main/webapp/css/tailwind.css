@@ -614,6 +614,16 @@ video {
   width: 100%
 }
 
+.test {
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+  border-width: 2px;
+  display: inline-block;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  padding: 0.125rem
+}
+
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
