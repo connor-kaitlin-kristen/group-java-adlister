@@ -17,6 +17,9 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <h1>Here is a single ad.</h1>
-
+<div>
+    <h1>${ad.title}</h1>
+    <p>${ad.description}</p>
+</div>
 </body>
 </html>
