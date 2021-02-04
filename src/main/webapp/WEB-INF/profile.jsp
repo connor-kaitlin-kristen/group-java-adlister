@@ -18,6 +18,9 @@
         <p>
            ${ad.description}
         </p>
+        <a href="/ad/${ad.id}" >More Details</a>
+        <a href="/ad/edit/${ad.id}">Edit?</a>
+        <a href="/ad/delete/${ad.id}">Delete</a>
     </c:forEach>
 </body>
 </html>
