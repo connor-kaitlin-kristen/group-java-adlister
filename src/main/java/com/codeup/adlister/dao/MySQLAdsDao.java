@@ -56,10 +56,6 @@ public class MySQLAdsDao implements Ads {
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
-//        if (! rs.next()) {
-//            return null;
-//        }
-//        rs.next();
         return new Ad(
             rs.getLong("id"),
             rs.getLong("user_id"),
@@ -95,4 +91,19 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+    @Override
+    public List<Ad> filterAds(String input) {
+        String query = "SELECT * FROM ads WHERE title LIKE CONCAT('%', ?, '%') OR description LIKE CONCAT('%', ?, '%')";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, input);
+            stmt.setString(2, input);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException sqlException) {
+            throw new RuntimeException("cannot find ad");
+        }
+    }
+
 }
