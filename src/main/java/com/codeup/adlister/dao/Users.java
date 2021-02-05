@@ -8,5 +8,6 @@ import java.util.List;
 public interface Users {
     User findByUsername(String username);
     Long insert(User user);
-    public List<Ad> getUserAds(long id);
+    List<Ad> getUserAds(long id);
+    void updateProfile(User user);
 }
