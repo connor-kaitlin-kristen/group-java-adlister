@@ -86,6 +86,7 @@ public class MySQLUsersDao implements Users  {
         try {
             while (rs.next()){
                 userAds.add(new Ad(
+                        rs.getLong("id"),
                         rs.getLong("user_id"),
                         rs.getString("title"),
                         rs.getString("description")
