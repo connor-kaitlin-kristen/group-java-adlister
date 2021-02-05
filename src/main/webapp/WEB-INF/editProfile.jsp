@@ -14,11 +14,11 @@
 <form action="/edit" method="post">
     <div class="form-group">
         <label for="newUsername">Update Username</label>
-        <input id="newUsername" name="newUsername" class="form-control" type="text">
+        <input id="newUsername" name="newUsername" class="form-control" type="text" value="${sessionScope.user.username}">
     </div>
     <div class="form-group">
         <label for="newEmail">Update Email</label>
-        <input id="newEmail" name="newEmail" class="form-control" type="text">
+        <input id="newEmail" name="newEmail" class="form-control" type="text" value="${sessionScope.user.email}">
     </div>
     <div class="form-group">
         <label for="oldPassword">Old Password</label>
