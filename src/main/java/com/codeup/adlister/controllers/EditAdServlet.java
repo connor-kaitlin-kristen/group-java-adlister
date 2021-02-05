@@ -20,7 +20,7 @@ public class EditAdServlet extends HttpServlet {
         String pathInfo = req.getPathInfo();
         int adId = Integer.parseInt(pathInfo.substring(1));
         req.setAttribute("ad", DaoFactory.getAdsDao().getAdById(adId));
-        req.getRequestDispatcher("/WEB-INF/ad/editAd.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/ads/editAd.jsp").forward(req, resp);
     }
 
     @Override
