@@ -22,5 +22,6 @@
         <a href="/ad/edit/${ad.id}">Edit?</a>
         <a href="/ad/delete/${ad.id}">Delete</a>
     </c:forEach>
+    <a href="/edit">Edit Profile</a>
 </body>
 </html>

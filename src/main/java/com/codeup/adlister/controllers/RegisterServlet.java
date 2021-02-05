@@ -18,6 +18,7 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("/profile");
             return;
         }
+//        request.getSession().removeAttribute("usernameTaken");
         request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
     }
 
@@ -33,7 +34,11 @@ public class RegisterServlet extends HttpServlet {
             || (! password.equals(passwordConfirmation));
 
         User user1 = DaoFactory.getUsersDao().findByUsername(username);
-        if (inputHasErrors || user1 != null) {
+        if (inputHasErrors) {
+            response.sendRedirect("/register");
+            return;
+        } else if (user1 != null) {
+            request.getSession().setAttribute("usernameTaken", true);
             response.sendRedirect("/register");
             return;
         }
