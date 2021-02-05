@@ -20,6 +20,9 @@
 <div>
     <h1>${ad.title}</h1>
     <p>${ad.description}</p>
+    <c:if test="${sessionScope.user != null && sessionScope.user.id == ad.userId}">
+        <a href="/ad/delete/${ad.id}">Delete</a>
+    </c:if>
 </div>
 </body>
 </html>

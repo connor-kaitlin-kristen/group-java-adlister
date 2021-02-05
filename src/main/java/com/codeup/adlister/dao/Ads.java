@@ -12,4 +12,5 @@ public interface Ads {
     List<Ad> filterAds(String input);
     Ad getAdById(int id);
     void deleteAd(int id);
+    void updateAds(Ad ad);
 }
