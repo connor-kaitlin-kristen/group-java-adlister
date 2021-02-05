@@ -3,6 +3,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
+import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +17,11 @@ public class EditProfileServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        User user = (User) req.getSession().getAttribute("user");
+        if(user == null) {
+            resp.sendRedirect("/login");
+            return;
+        }
         req.getRequestDispatcher("/WEB-INF/editProfile.jsp").forward(req, resp);
     }
 
@@ -32,7 +38,8 @@ public class EditProfileServlet extends HttpServlet {
                 || newEmail.isEmpty()
                 || newPassword.isEmpty()
                 || (newPassword.equals(oldPassword))
-                || (!newPassword.equals(newPasswordConfirm));
+                || (!newPassword.equals(newPasswordConfirm))
+                || (!BCrypt.checkpw(oldPassword, DaoFactory.getUsersDao().findByUsername(user.getUsername()).getPassword()));
 
         if(inputHasErrors) {
             resp.sendRedirect("/edit");
@@ -42,13 +49,12 @@ public class EditProfileServlet extends HttpServlet {
             return;
         }
 
-        user.setUsername(newUsername);
-        user.setEmail(newEmail);
-        user.setPassword(newPassword);
+            user.setUsername(newUsername);
+            user.setEmail(newEmail);
+            user.setPassword(newPassword);
 
-        DaoFactory.getUsersDao().updateProfile(user);
-        resp.sendRedirect("/profile");
-
+            DaoFactory.getUsersDao().updateProfile(user);
+            resp.sendRedirect("/profile");
 
 
     }
