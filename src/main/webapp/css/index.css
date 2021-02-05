@@ -19,7 +19,7 @@
         @apply w-full py-0.5 bg-yellow-400 inline-block
     }
 
-    .test {
-        @apply p-0.5 inline-block mx-1 border-2 border-white
+    .navlink {
+        @apply p-0.5 inline-block mx-1 my-1 border-2 border-white
     }
 }

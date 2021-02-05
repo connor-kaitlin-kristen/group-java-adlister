@@ -614,11 +614,13 @@ video {
   width: 100%
 }
 
-.test {
+.navlink {
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity));
   border-width: 2px;
   display: inline-block;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   padding: 0.125rem
