@@ -17,6 +17,20 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <fieldset>
+                <label for="hex">hex</label>
+                <input id="hex" type="checkbox" name="category" value="hex">
+                <label for="white-magic" >white magic</label>
+                <input id="white-magic" type="checkbox" name="category" value="whiteMagic">
+                <label for="ingredients">ingredients</label>
+                <input id="ingredients" type="checkbox" name="category" value="ingredients">
+                <label for="familiars">familiars</label>
+                <input id="familiars" type="checkbox" name="category" value="familiars">
+                <label for="crystals">crystals</label>
+                <input id="crystals" type="checkbox" name="category" value="crystals">
+                <label for="spell-books">spell books</label>
+                <input id="spell-books" type="checkbox" name="category" value="spellBooks">
+            </fieldset>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>

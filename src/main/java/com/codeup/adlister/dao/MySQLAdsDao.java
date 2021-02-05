@@ -130,6 +130,7 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException sqle) {
             throw new RuntimeException("could not update ad");
         }
-
     }
+
+
 }
