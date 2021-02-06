@@ -24,13 +24,13 @@ public class MySQLCategoriesDao implements Categories {
     }
 
 
-    private List<Long> categoryIdList(List<Category> categoryList) {
+    public List<Long> categoryIdList(List<Category> categoryList) {
         List<Long> idList = new ArrayList<>();
         for (Category category : categoryList) idList.add(category.getId());
         return idList;
     }
 
-    private List<Category> categoryList(List<String> categories) {
+    public List<Category> categoryList(List<String> categories) {
         List<Category> catList = new ArrayList<>();
         for (String category : categories) {
             String query = "SELECT * FROM categories WHERE title LIKE ? LIMIT 1";
@@ -38,16 +38,32 @@ public class MySQLCategoriesDao implements Categories {
                 PreparedStatement stmt = connection.prepareStatement(query);
                 stmt.setString(1, category);
                 ResultSet rs = stmt.executeQuery();
-                rs.next();
-                catList.add(new Category(
-                    rs.getLong("id"),
-                    rs.getString("title")
-                ));
+                if(rs.next()) {
+                    catList.add(new Category(
+                            rs.getLong("id"),
+                            rs.getString("title")
+                    ));
+                }
             } catch (SQLException sqlException) {
                 sqlException.printStackTrace();
             }
         }
         return catList;
+    }
+
+    @Override
+    public void insertAdCategory(long adId, List<Long> catId) {
+        for (long id: catId) {
+            String query = "INSERT INTO ad_category(ad_id, category_id) VALUES (?, ?)";
+            try {
+                PreparedStatement stmt = connection.prepareStatement(query);
+                stmt.setLong(1, adId);
+                stmt.setLong(2, id);
+                stmt.executeUpdate();
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            }
+        }
     }
 
 
