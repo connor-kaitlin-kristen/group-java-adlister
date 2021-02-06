@@ -21,7 +21,7 @@
                 <label for="hex">hex</label>
                 <input id="hex" type="checkbox" name="category" value="hex">
                 <label for="white-magic" >white magic</label>
-                <input id="white-magic" type="checkbox" name="category" value="whiteMagic">
+                <input id="white-magic" type="checkbox" name="category" value="white magic">
                 <label for="ingredients">ingredients</label>
                 <input id="ingredients" type="checkbox" name="category" value="ingredients">
                 <label for="familiars">familiars</label>
@@ -29,7 +29,7 @@
                 <label for="crystals">crystals</label>
                 <input id="crystals" type="checkbox" name="category" value="crystals">
                 <label for="spell-books">spell books</label>
-                <input id="spell-books" type="checkbox" name="category" value="spellBooks">
+                <input id="spell-books" type="checkbox" name="category" value="spell books">
             </fieldset>
             <input type="submit" class="btn btn-block btn-primary">
         </form>

@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.Category;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -21,21 +22,22 @@ public class CreateAdServlet extends HttpServlet {
             return;
         }
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
-            .forward(request, response);
+                .forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
-        List<String> categoryList = Arrays.asList(request.getParameterValues("category"));
+        List<String> categoryStringList = Arrays.asList(request.getParameterValues("category"));
         Ad ad = new Ad(
-            user.getId(),
-            request.getParameter("title"),
-            request.getParameter("description")
+                user.getId(),
+                request.getParameter("title"),
+                request.getParameter("description")
         );
 
         long newAdId = DaoFactory.getAdsDao().insert(ad);
-
-
+        List<Category> catList = DaoFactory.getCategoriesDao().categoryList(categoryStringList);
+        List<Long> catIdList = DaoFactory.getCategoriesDao().categoryIdList(catList);
+        DaoFactory.getCategoriesDao().insertAdCategory(newAdId, catIdList);
         response.sendRedirect("/ads");
     }
 }
