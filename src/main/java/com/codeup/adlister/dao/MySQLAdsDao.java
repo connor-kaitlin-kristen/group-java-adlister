@@ -55,6 +55,26 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    private List<String> getAdCategories(Ad ad) {
+        List<String> catList = new ArrayList<>();
+        String query = String.format("SELECT categories.title FROM categories " +
+                "JOIN ad_categories ac ON categories.id = ac.categories_id" +
+                "JOIN ads ON ads.id = ac.ad_id WHERE ads.id IN (%s)", ad.getId());
+        try {
+            Statement  stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+            while(rs.next()) {
+                catList.add(
+                        rs.getString(1)
+                );
+            }
+            return catList;
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+            throw new RuntimeException("could not get categories");
+        }
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),

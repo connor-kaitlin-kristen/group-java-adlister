@@ -16,7 +16,14 @@ public class Ad {
         this.description = description;
     }
 
-    public Ad(long id,long userId, String title, String description, List<String> categories) {
+    public Ad(long userId, String title, String description, List<String> categories) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.categories = categories;
+    }
+
+    public Ad(long id, long userId, String title, String description, List<String> categories) {
         this.id = id;
         this.userId = userId;
         this.title = title;
