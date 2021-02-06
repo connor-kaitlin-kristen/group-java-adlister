@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public non-sealed class MySQLCategoriesDao implements Categories {
+public class MySQLCategoriesDao implements Categories {
     private Connection connection;
 
     public MySQLCategoriesDao(Config config) {
