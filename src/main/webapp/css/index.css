@@ -34,7 +34,7 @@
         @apply p-0.5 inline-block mx-1 my-1 border-2 border-white
     }
     .adcard {
-        @apply col-span-full md:col-span-6 lg:col-span-4 bg-green-300 rounded-md
+        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-green-300 rounded-md
     }
     .adcard h2 {
         @apply p-1 text-xl font-medium
@@ -81,5 +81,8 @@
     }
     .X {
         @apply inline-block py-0.5 w-full bg-green-300 relative transform -rotate-45
+    }
+    a.siteLogo {
+        @apply ml-1 mt-0 text-3xl text-gray-300 font-semibold
     }
 }

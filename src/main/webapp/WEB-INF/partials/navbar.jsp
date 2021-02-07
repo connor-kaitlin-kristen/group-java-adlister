@@ -6,14 +6,14 @@
         <div class="flex justify-between sm:m-0 mt-1 w-full sm:w-min">
             <div class="flex items-center">
                 <img class="w-8" src="../../img/foster.png" alt="fostercat">
-                <a class="siteLogo ml-1" href="/">HexLister</a>
+                <a class="siteLogo" href="/">HexLister</a>
             </div>
             <div id="hamburger" class="mr-1 w-8 h-7 flex items-center sm:hidden">
                 <span class="bar"></span>
             </div>
         </div>
-        <div id="searchBar">
-            Search Placeholder
+        <div id="searchBar" class="cursor-pointer">
+            <span class="material-icons ">search</span>
         </div>
         <ul class="flex items-center flex-col sm:flex-row inline-block">
             <li><a class="navlink" href="/login">LOGIN</a></li>
