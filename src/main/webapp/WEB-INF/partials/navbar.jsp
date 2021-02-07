@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <nav id="nav" class="p-0.5 w-full bg-green-900 text-purple-100 max-h-12 overflow-y-hidden">
     <div class="flex flex-col sm:flex-row justify-between items-center">
@@ -15,9 +16,13 @@
         </form>
         <ul class="flex items-center flex-col sm:flex-row inline-block">
             <li><a class="navlink" href="/login">LOGIN</a></li>
-            <li><a class="navlink" href="/logout">LOGOUT</a></li>
+            <c:if test="${sessionScope.user != null}">
+                <li><a class="navlink" href="/logout">LOGOUT</a></li>
+            </c:if>
             <li><a class="navlink" href="/register">REGISTER</a></li>
-            <li><a class="navlink" href="/ads/create">CREATE</a></li>
+            <c:if test="${sessionScope.user != null}">
+                <li><a class="navlink" href="/ads/create">CREATE</a></li>
+            </c:if>
             <li><a class="navlink" href="/ads">VIEW ALL</a></li>
         </ul>
     </div>
