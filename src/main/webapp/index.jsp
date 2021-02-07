@@ -7,10 +7,12 @@
     </jsp:include>
 </head>
 <body>
+    <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1 class="">Welcome to the Hexlister, Witches!</h1>
     </div>
+
+<script src="js/index.js"></script>
 </body>
-<script src="js/hamburger.js"></script>
 </html>

@@ -17,7 +17,7 @@
             <p>${ad.description}</p>
             <h3>Categories: </h3>
             <c:forEach var="category" items="${ad.categories}">
-                <span>${category}</span>
+                <span class="pill">${category}</span>
             </c:forEach>
             <a href="/ad/${ad.id}" >More Details</a>
         </div>
