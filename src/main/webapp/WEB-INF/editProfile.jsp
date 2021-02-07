@@ -11,29 +11,32 @@
     <title>Edit Profile</title>
 </head>
 <body>
-<form action="/edit" method="post">
-    <div class="form-group">
-        <label for="newUsername">Update Username</label>
-        <input id="newUsername" name="newUsername" class="form-control" type="text" value="${sessionScope.user.username}">
-    </div>
-    <div class="form-group">
-        <label for="newEmail">Update Email</label>
-        <input id="newEmail" name="newEmail" class="form-control" type="text" value="${sessionScope.user.email}">
-    </div>
-    <div class="form-group">
-        <label for="oldPassword">Old Password</label>
-        <input id="oldPassword" name="oldPassword" class="form-control" type="password">
-    </div>
-    <div class="form-group">
-        <label for="newPassword">New Password</label>
-        <input id="newPassword" name="newPassword" class="form-control" type="password">
-    </div>
-    <div class="form-group">
-        <label for="newPasswordConfirm">Confirm New Password</label>
-        <input id="newPasswordConfirm" name="newPasswordConfirm" class="form-control" type="password">
-    </div>
-    <input type="submit" class="">
-</form>
-
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<div class="form">
+    <form action="/edit" method="post">
+        <div class="input-wrapper">
+            <label for="newUsername" class="labels">Update Username</label>
+            <input id="newUsername" name="newUsername" class="form-input" type="text" value="${sessionScope.user.username}">
+        </div>
+        <div class="input-wrapper">
+            <label for="newEmail" class="labels">Update Email</label>
+            <input id="newEmail" name="newEmail" class="form-input" type="text" value="${sessionScope.user.email}">
+        </div>
+        <div class="input-wrapper">
+            <label for="oldPassword" class="labels">Old Password</label>
+            <input id="oldPassword" name="oldPassword" class="form-input" type="password">
+        </div>
+        <div class="input-wrapper">
+            <label for="newPassword" class="labels">New Password</label>
+            <input id="newPassword" name="newPassword" class="form-input" type="password">
+        </div>
+        <div class="input-wrapper">
+            <label for="newPasswordConfirm" class="labels">Confirm New Password</label>
+            <input id="newPasswordConfirm" name="newPasswordConfirm" class="form-input" type="password">
+        </div>
+        <input type="submit" class="main-btn">
+    </form>
+</div>
 </body>
+<script src="../js/hamburger.js"></script>
 </html>
