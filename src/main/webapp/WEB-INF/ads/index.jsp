@@ -16,6 +16,9 @@
         <div class="col-md-6" data-id="${ad.id}">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <c:forEach var="category" items="${ad.categories}">
+                <span>${category}</span>
+            </c:forEach>
             <a href="/ad/${ad.id}" >More Details</a>
         </div>
     </c:forEach>

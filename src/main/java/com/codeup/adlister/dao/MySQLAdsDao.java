@@ -55,11 +55,11 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    private List<String> getAdCategories(Ad ad) {
+    private List<String> getAdCategories(long id) {
         List<String> catList = new ArrayList<>();
         String query = String.format("SELECT categories.title FROM categories " +
-                "JOIN ad_categories ac ON categories.id = ac.categories_id" +
-                "JOIN ads ON ads.id = ac.ad_id WHERE ads.id IN (%s)", ad.getId());
+                "JOIN ad_category ac ON categories.id = ac.category_id " +
+                "JOIN ads ON ads.id = ac.ad_id WHERE ads.id IN (%s)", id);
         try {
             Statement  stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(query);
@@ -77,10 +77,11 @@ public class MySQLAdsDao implements Ads {
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description")
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description"),
+                getAdCategories(rs.getLong("id"))
         );
     }
 
@@ -96,7 +97,9 @@ public class MySQLAdsDao implements Ads {
                         rs.getLong("id"),
                         rs.getLong("user_id"),
                         rs.getString("title"),
-                        rs.getString("description"));
+                        rs.getString("description"),
+                        getAdCategories(rs.getLong("id"))
+                );
             }
             return ad;
         } catch (SQLException e) {
@@ -104,8 +107,19 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    private void deleteAdCategory(long adId) {
+        String query = String.format("DELETE FROM ad_category WHERE ad_id = %d ", adId);
+        try {
+            Statement stmt = connection.createStatement();
+            stmt.executeUpdate(query);
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+    }
+
     @Override
     public void deleteAd(int id) {
+        deleteAdCategory(id);
         String query = "DELETE FROM ads WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
@@ -138,6 +152,39 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    public List<Ad> getUserAds(long id) {
+        String userAds = "SELECT * FROM ads " +
+                "JOIN users ON users.id = user_id WHERE users.id LIKE "+id;
+        try {
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery(userAds);
+            return listUserAds(rs);
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+            throw new RuntimeException("could not retrieve adds");
+        }
+    }
+
+
+    private List<Ad> listUserAds(ResultSet rs) {
+        List<Ad> userAds = new ArrayList<>();
+        try {
+            while (rs.next()){
+                userAds.add(new Ad(
+                        rs.getLong("id"),
+                        rs.getLong("user_id"),
+                        rs.getString("title"),
+                        rs.getString("description"),
+                        getAdCategories(rs.getLong("id"))
+                ));
+            }
+            return userAds;
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+            throw new RuntimeException("could not retrieve adds");
+        }
+    }
+
     @Override
     public void updateAds(Ad ad) {
         String query = "UPDATE ads SET title = ?, description = ? WHERE id LIKE ?";
@@ -151,6 +198,4 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("could not update ad");
         }
     }
-
-
 }
