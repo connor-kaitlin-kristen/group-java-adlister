@@ -33,16 +33,16 @@
         @apply col-span-full md:col-span-6 lg:col-span-4 bg-green-300
     }
     .form-input {
-        @apply bg-purple-200 rounded-sm py-0.5 px-1 w-1/2
+        @apply bg-purple-200 rounded-sm py-0.5 px-1 w-11/12 max-w-xl
     }
     .form-input:focus {
         @apply bg-purple-100 outline-none ring ring-purple-700
     }
     .main-btn {
-        @apply p-0.5 bg-green-400 rounded-sm outline-none
+        @apply p-0.5 bg-green-400 rounded-sm outline-none mt-6
     }
     .main-btn:active {
-        @apply ring ring-green-700 scale-90
+        @apply transform ring ring-green-700 scale-90
     }
     .main-btn:hover {
         @apply bg-green-300
@@ -57,9 +57,9 @@
         @apply my-3
     }
     .nav-search {
-       @apply outline-none bg-white rounded-sm py-0.5 px-1
+       @apply outline-none bg-white rounded-sm py-0.5 px-1 inline-block text-gray-900
     }
     .nav-search:focus {
-        @apply ring-1 scale-110 ring-gray-700
+        @apply transform ring ring-1 scale-110 ring-gray-500
     }
 }
