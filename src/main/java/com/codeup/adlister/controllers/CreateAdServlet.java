@@ -36,8 +36,7 @@ public class CreateAdServlet extends HttpServlet {
         );
 
         long newAdId = DaoFactory.getAdsDao().insert(ad);
-        List<Category> catList = DaoFactory.getCategoriesDao().categoryList(categoryStringList);
-        List<Long> catIdList = DaoFactory.getCategoriesDao().categoryIdList(catList);
+        List<Long> catIdList = DaoFactory.getCategoriesDao().categoryList(categoryStringList);;
         DaoFactory.getCategoriesDao().insertAdCategory(newAdId, catIdList);
         response.sendRedirect("/ads");
     }
