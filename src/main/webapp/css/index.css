@@ -22,4 +22,8 @@
     .navlink {
         @apply p-0.5 inline-block mx-1 my-1 border-2 border-white
     }
+
+    .adcard {
+        @apply col-span-full md:col-span-6 lg:col-span-4 bg-green-300
+    }
 }
