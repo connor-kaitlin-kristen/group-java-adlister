@@ -9,7 +9,8 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1 class="">Welcome to the Adlister!</h1>
+        <h1 class="">Welcome to the Hexlister, Witches!</h1>
     </div>
 </body>
+<script src="js/hamburger.js"></script>
 </html>

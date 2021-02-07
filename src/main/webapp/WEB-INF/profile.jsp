@@ -27,4 +27,5 @@
     </c:forEach>
     <a href="/edit">Edit Profile</a>
 </body>
+<script src="../js/hamburger.js"></script>
 </html>

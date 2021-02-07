@@ -11,16 +11,20 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/ad/edit/${ad.id}" method="post">
-    <div class="form-group">
-        <label for="title">Title</label>
-        <input id="title" name="title" class="form-control" type="text" value="${ad.title}">
-    </div>
-    <div class="form-group">
-        <label for="description">Description</label>
-        <textarea id="description" name="description" class="form-control">${ad.description}</textarea>
-    </div>
-    <button>Save Changes</button>
-</form>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<div class="form">
+    <form action="/ad/edit/${ad.id}" method="post" class="form">
+        <div class="input-wrapper">
+            <label for="title" class="labels">Title</label>
+            <input id="title" name="title" class="form-input" type="text" value="${ad.title}">
+        </div>
+        <div class="input-wrapper">
+            <label for="description" class="labels">Description</label>
+            <textarea id="description" name="description" class="form-input">${ad.description}</textarea>
+        </div>
+        <button class="main-btn">Save Changes</button>
+    </form>
+</div>
 </body>
+<script src="../js/hamburger.js"></script>
 </html>

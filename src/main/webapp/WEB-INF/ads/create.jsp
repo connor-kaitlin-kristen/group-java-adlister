@@ -6,16 +6,17 @@
     </jsp:include>
 </head>
 <body>
-    <div class="container">
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    <div class="form">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input id="title" name="title" class="form-control" type="text">
+            <div class="input-wrapper">
+                <label for="title" class="labels">Title</label>
+                <input id="title" name="title" class="form-input" type="text">
             </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text"></textarea>
+            <div class="input-wrapper">
+                <label for="description" class="labels">Description</label>
+                <textarea id="description" name="description" class="form-input" type="text"></textarea>
             </div>
             <fieldset>
                 <label for="hexes">hexes</label>
@@ -39,8 +40,9 @@
                 <label for="attire">attire</label>
                 <input id="attire" type="checkbox" name="category" value="attire">
             </fieldset>
-            <input type="submit" class="btn btn-block btn-primary">
+            <input type="submit" class="main-btn">
         </form>
     </div>
 </body>
+<script src="../js/hamburger.js"></script>
 </html>
