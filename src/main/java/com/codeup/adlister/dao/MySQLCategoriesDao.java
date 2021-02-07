@@ -24,13 +24,14 @@ public class MySQLCategoriesDao implements Categories {
     }
 
 
-    public List<Long> categoryIdList(List<Category> categoryList) {
+    private List<Long> categoryIdList(List<Category> categoryList) {
         List<Long> idList = new ArrayList<>();
         for (Category category : categoryList) idList.add(category.getId());
         return idList;
     }
 
-    public List<Category> categoryList(List<String> categories) {
+    @Override
+    public List<Long> categoryList(List<String> categories) {
         List<Category> catList = new ArrayList<>();
         for (String category : categories) {
             String query = "SELECT * FROM categories WHERE title LIKE ? LIMIT 1";
@@ -48,7 +49,7 @@ public class MySQLCategoriesDao implements Categories {
                 sqlException.printStackTrace();
             }
         }
-        return catList;
+        return categoryIdList(catList);
     }
 
     @Override

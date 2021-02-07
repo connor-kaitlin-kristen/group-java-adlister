@@ -67,38 +67,6 @@ public class MySQLUsersDao implements Users  {
         );
     }
 
-    public List<Ad> getUserAds(long id) {
-        String userAds = "SELECT * FROM ads " +
-                "JOIN users ON users.id = user_id WHERE users.id LIKE "+id;
-        try {
-            Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(userAds);
-            return listUserAds(rs);
-        } catch (SQLException sqlException) {
-            sqlException.printStackTrace();
-            throw new RuntimeException("could not retrieve adds");
-        }
-    }
-
-
-    private List<Ad> listUserAds(ResultSet rs) {
-        List<Ad> userAds = new ArrayList<>();
-        try {
-            while (rs.next()){
-                userAds.add(new Ad(
-                        rs.getLong("id"),
-                        rs.getLong("user_id"),
-                        rs.getString("title"),
-                        rs.getString("description")
-                ));
-            }
-            return userAds;
-        } catch (SQLException sqle) {
-            sqle.printStackTrace();
-            throw new RuntimeException("could not retrieve adds");
-        }
-    }
-
     @Override
     public void updateProfile(User user) {
         String query = "UPDATE users SET username = ?, email = ?, password = ? WHERE id LIKE ?";

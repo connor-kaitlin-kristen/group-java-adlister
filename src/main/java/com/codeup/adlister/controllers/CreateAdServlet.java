@@ -31,12 +31,12 @@ public class CreateAdServlet extends HttpServlet {
         Ad ad = new Ad(
                 user.getId(),
                 request.getParameter("title"),
-                request.getParameter("description")
+                request.getParameter("description"),
+                categoryStringList
         );
 
         long newAdId = DaoFactory.getAdsDao().insert(ad);
-        List<Category> catList = DaoFactory.getCategoriesDao().categoryList(categoryStringList);
-        List<Long> catIdList = DaoFactory.getCategoriesDao().categoryIdList(catList);
+        List<Long> catIdList = DaoFactory.getCategoriesDao().categoryList(categoryStringList);;
         DaoFactory.getCategoriesDao().insertAdCategory(newAdId, catIdList);
         response.sendRedirect("/ads");
     }

@@ -18,6 +18,9 @@
         <p>
            ${ad.description}
         </p>
+        <c:forEach var="category" items="${ad.categories}">
+            <span>${category}</span>
+        </c:forEach>
         <a href="/ad/${ad.id}" >More Details</a>
         <a href="/ad/edit/${ad.id}">Edit?</a>
         <a href="/ad/delete/${ad.id}">Delete</a>
