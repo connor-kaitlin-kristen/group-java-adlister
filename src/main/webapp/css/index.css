@@ -4,7 +4,13 @@
 
 @layer base {
     body {
-        @apply bg-gray-200
+        @apply bg-gray-200 overflow-x-hidden
+    }
+    a:not(.navlink), a:not(.siteLogo) {
+        @apply p-0.5 mt-1 block text-base font-medium
+    }
+    a:not(.navlink):hover {
+        @apply text-purple-600 font-semibold
     }
 }
 
@@ -24,13 +30,17 @@
         top: 7px;
         @apply w-full py-0.5 bg-yellow-400 inline-block
     }
-
     .navlink {
         @apply p-0.5 inline-block mx-1 my-1 border-2 border-white
     }
-
     .adcard {
-        @apply col-span-full md:col-span-6 lg:col-span-4 bg-green-300
+        @apply col-span-full md:col-span-6 lg:col-span-4 bg-green-300 rounded-md
+    }
+    .adcard h2 {
+        @apply p-1 text-xl font-medium
+    }
+    .adcard p {
+        @apply px-1 my-1
     }
     .form-input {
         @apply bg-purple-200 rounded-sm py-0.5 px-1 w-11/12 max-w-xl
@@ -61,5 +71,15 @@
     }
     .nav-search:focus {
         @apply transform ring ring-1 scale-110 ring-gray-500
+    }
+    .pill {
+        @apply m-1 rounded-full bg-purple-400 py-1.5 px-3 font-medium
+    }
+    .X::before {
+        content: "";
+        @apply inline-block py-0.5 w-full bg-green-300 absolute top-0 transform rotate-90
+    }
+    .X {
+        @apply inline-block py-0.5 w-full bg-green-300 relative transform -rotate-45
     }
 }

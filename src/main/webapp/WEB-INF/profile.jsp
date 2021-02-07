@@ -12,20 +12,23 @@
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
-
-    <c:forEach var="ad" items="${sessionScope.userAds}">
-        <h1>${ad.title}</h1>
-        <p>
-           ${ad.description}
-        </p>
-        <c:forEach var="category" items="${ad.categories}">
-            <span>${category}</span>
+    <div class="grid grid-cols-12 gap-1 mx-1">
+        <c:forEach var="ad" items="${sessionScope.userAds}">
+        <div class="adcard">
+            <h2>${ad.title}</h2>
+            <p>
+               ${ad.description}
+            </p>
+            <c:forEach var="category" items="${ad.categories}">
+                <span class="pill">${category}</span>
+            </c:forEach>
+            <a href="/ad/${ad.id}" >More Details</a>
+            <a href="/ad/edit/${ad.id}">Edit?</a>
+            <a href="/ad/delete/${ad.id}">Delete</a>
+        </div>
         </c:forEach>
-        <a href="/ad/${ad.id}" >More Details</a>
-        <a href="/ad/edit/${ad.id}">Edit?</a>
-        <a href="/ad/delete/${ad.id}">Delete</a>
-    </c:forEach>
+    </div>
     <a href="/edit">Edit Profile</a>
 </body>
-<script src="../js/hamburger.js"></script>
+<script src="../js/index.js"></script>
 </html>
