@@ -18,8 +18,8 @@
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
             <fieldset>
-                <label for="hex">hex</label>
-                <input id="hex" type="checkbox" name="category" value="hex">
+                <label for="hexes">hexes</label>
+                <input id="hexes" type="checkbox" name="category" value="hexes">
                 <label for="white-magic" >white magic</label>
                 <input id="white-magic" type="checkbox" name="category" value="white magic">
                 <label for="ingredients">ingredients</label>
@@ -30,6 +30,12 @@
                 <input id="crystals" type="checkbox" name="category" value="crystals">
                 <label for="spell-books">spell books</label>
                 <input id="spell-books" type="checkbox" name="category" value="spell books">
+                <label for="transportation">transportation</label>
+                <input id="transportation" type="checkbox" name="category" value="transportation">
+                <label for="lodging">lodging</label>
+                <input id="lodging" type="checkbox" name="category" value="lodging">
+                <label for="lost-and-found">lost and found</label>
+                <input id="lost-and-found" type="checkbox" name="category" value="lost and found">
             </fieldset>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
