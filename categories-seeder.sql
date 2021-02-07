@@ -8,4 +8,5 @@ INSERT INTO categories (title) VALUES ('hexes'),
                                       ('spell books'),
                                       ('transportation'),
                                       ('lodging'),
-                                      ('lost and found');
+                                      ('lost and found'),
+                                      ('attire');

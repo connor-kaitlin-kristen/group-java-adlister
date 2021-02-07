@@ -36,6 +36,8 @@
                 <input id="lodging" type="checkbox" name="category" value="lodging">
                 <label for="lost-and-found">lost and found</label>
                 <input id="lost-and-found" type="checkbox" name="category" value="lost and found">
+                <label for="attire">attire</label>
+                <input id="attire" type="checkbox" name="category" value="attire">
             </fieldset>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
