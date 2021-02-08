@@ -7,6 +7,7 @@
     </jsp:include>
 </head>
 <body>
+    <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
     <jsp:include page="partials/navbar.jsp" />
     <div class="form">
         <h1>Please fill in your information.</h1>

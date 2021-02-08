@@ -15,13 +15,13 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<h1>Here is a single ad.</h1>
-<div>
-    <h1>${ad.title}</h1>
+<div class="adcard ">
+    <h2>${ad.title}</h2>
     <p>${ad.description}</p>
     <c:forEach var="category" items="${ad.categories}">
-        <span>${category}</span>
+        <span class="pill">${category}</span>
     </c:forEach>
     <c:if test="${sessionScope.user != null && sessionScope.user.id == ad.userId}">
         <a href="/ad/delete/${ad.id}">Delete</a>

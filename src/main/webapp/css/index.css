@@ -51,10 +51,11 @@
     }
 
     .adcard {
-        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-green-300 rounded-md
+        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-green-300 rounded-md flex flex-col justify-end
     }
 
     .adcard h2 {
+        font-family: Merienda, cursive;
         @apply p-1 text-xl font-medium
     }
 
@@ -99,11 +100,11 @@
     }
 
     .nav-search:focus {
-        @apply transform ring ring-1 scale-110 ring-gray-500
+        @apply ring ring-1 ring-gray-500
     }
 
     .pill {
-        @apply m-1 rounded-full bg-purple-400 py-1.5 px-3 font-medium
+        @apply m-1 rounded-full bg-purple-400 py-1.5 px-3 font-medium w-min whitespace-nowrap
     }
 
     .X::before {
@@ -121,6 +122,9 @@
 
     .center {
         @apply h-full flex items-center justify-center
+    }
+    #massiveSearch {
+        transition: left 300ms ease-in-out;
     }
 
 }

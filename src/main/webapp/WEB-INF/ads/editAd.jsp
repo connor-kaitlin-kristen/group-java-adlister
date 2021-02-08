@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="form">
     <form action="/ad/edit/${ad.id}" method="post" class="form">
