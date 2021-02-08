@@ -17,7 +17,10 @@ module.exports = {
         'darkWitchPurple': '#280532',
         'codeupGreen': '#49c059',
         'eggshellWhite': '#f5f5f5'
-      })
+      }),
+      height: {
+        '100': '50rem'
+      }
     },
     // rotate: {'135':'135deg', '45':'45deg'},
   },

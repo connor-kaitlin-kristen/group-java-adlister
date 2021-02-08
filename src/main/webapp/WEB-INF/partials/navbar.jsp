@@ -14,8 +14,7 @@
         </div>
         <div id="searchBar" class="cursor-pointer mt-2 sm:mt-0 flex items-center">
             <span class="material-icons navlink">search</span>
-            <img class="h-5 px-1" src="../../img/line.png" alt="separatingline">
-        <%--            <span class="hidden sm:inline text-2xl font-semibold">|</span>--%>
+            <img class="h-5 px-1 hidden sm:block" src="../../img/line.png" alt="separatingline">
         </div>
         <ul class="flex items-center flex-col sm:flex-row inline-block">
             <li><a class="navlink merienda" href="/login">Login</a></li>
