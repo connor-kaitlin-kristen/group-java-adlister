@@ -5,12 +5,21 @@ module.exports = {
     extend: {
       fontFamily: {
         'delius': ['delius', 'sans-serif']
-      }
+      },
+      backgroundColor: theme => ({
+        ...theme('colors'),
+        'darkGreen': '#094809',
+        'witchPurple': '#650d7f',
+        'darkWitchGreen': '#0aa230',
+        'darkWitchPurple': '#280532'
+      })
     },
     // rotate: {'135':'135deg', '45':'45deg'},
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundOpacity: ['dark']
+    },
   },
   plugins: [],
 }

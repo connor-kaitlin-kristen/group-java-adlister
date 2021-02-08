@@ -5,7 +5,7 @@
 
 @layer base {
     body {
-        @apply bg-gray-200 overflow-x-hidden dark:bg-gray-600
+        @apply bg-gray-200 overflow-x-hidden dark:bg-darkWitchPurple
     }
 
     a:not(.navlink), a:not(.siteLogo) {
@@ -60,7 +60,7 @@
     }
 
     .adcard {
-        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-green-300 rounded-md flex flex-col justify-end
+        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-darkGreen bg-opacity-70 rounded-md flex flex-col justify-between dark:text-gray-400
     }
 
     .adcard h2 {
@@ -113,7 +113,7 @@
     }
 
     .pill {
-        @apply m-1 rounded-full bg-purple-400 py-1.5 px-3 font-medium w-min whitespace-nowrap
+        @apply m-1 rounded-full bg-purple-400 py-1 px-3 font-medium w-min whitespace-nowrap uppercase bg-witchPurple
     }
 
     .X::before {
@@ -144,6 +144,6 @@
 
     .title-page-sub {
         font-family: sans-serif;
-        @apply text-xl mt-6 text-center bg-gray-400 rounded-lg p-3 bg-opacity-30 mx-2 shadow-md dark:bg-gray-200
+        @apply text-xl mt-6 text-center bg-white rounded-lg p-3 bg-opacity-30 mx-2 shadow-md dark:bg-opacity-50
     }
 }

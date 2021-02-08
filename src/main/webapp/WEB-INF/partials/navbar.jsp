@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<nav id="nav" class="p-0.5 w-full bg-green-900 text-purple-100 max-h-12 overflow-y-hidden">
+<nav id="nav" class="p-0.5 w-full bg-darkGreen text-purple-100 max-h-12 overflow-y-hidden">
     <div class="flex flex-col sm:flex-row justify-between items-center">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="flex justify-between sm:m-0 mt-1 w-full sm:w-min flex-grow">

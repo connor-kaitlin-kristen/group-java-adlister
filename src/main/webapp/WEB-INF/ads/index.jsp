@@ -11,15 +11,16 @@
 <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<h1>Here Are all the ads!</h1>
-<div class="grid grid-cols-12 gap-1 mx-1">
+<div class="grid grid-cols-12 gap-1 mx-1 mt-10">
     <c:forEach var="ad" items="${ads}">
         <div class="adcard" data-id="${ad.id}">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <c:forEach var="category" items="${ad.categories}">
-                <span class="pill">${category}</span>
-            </c:forEach>
+            <div>
+                <c:forEach var="category" items="${ad.categories}">
+                    <span class="pill">${category}</span>
+                </c:forEach>
+            </div>
             <a href="/ad/${ad.id}" >More Details</a>
         </div>
     </c:forEach>
