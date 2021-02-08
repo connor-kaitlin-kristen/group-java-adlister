@@ -11,15 +11,15 @@
     <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="form">
-        <h1>Please Log In</h1>
+        <h1 class="merienda dark:text-gray-800 text-xl">Please Log In</h1>
         <form action="/login" method="POST">
             <div class="input-wrapper">
                 <label for="username" class="labels">Username</label>
-                <input id="username" name="username" class="form-input" type="text">
+                <input id="username" name="username" class="form-input bg-purple-200" type="text">
             </div>
             <div class="input-wrapper">
                 <label for="password" class="labels">Password</label>
-                <input id="password" name="password" class="form-input" type="password">
+                <input id="password" name="password" class="form-input bg-purple-200" type="password">
             </div>
             <input type="submit" class="main-btn" value="Log In">
         </form>

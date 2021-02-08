@@ -12,7 +12,7 @@
     <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
     <jsp:include page="partials/navbar.jsp" />
     <div class="form">
-        <h1>Please fill in your information.</h1>
+        <h1 class="merienda dark:text-gray-800 text-xl">Please fill in your information.</h1>
         <form action="/register" method="post">
             <div class="input-wrapper">
                 <label for="username" class="labels">Username</label>

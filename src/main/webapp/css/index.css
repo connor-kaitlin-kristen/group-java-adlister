@@ -9,7 +9,7 @@
     }
 
     a:not(.navlink), a:not(.siteLogo) {
-        @apply p-0.5 mt-1 block text-base font-medium
+        @apply p-0.5 mt-1 block text-base font-medium w-min whitespace-nowrap
     }
 
     a:not(.navlink):hover {
@@ -68,7 +68,7 @@
     }
 
     .adcard {
-        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-codeupGreen bg-opacity-70 rounded-md flex flex-col justify-between dark:text-gray-400
+        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-codeupGreen bg-opacity-70 rounded-md flex flex-col justify-between dark:text-gray-200
     }
 
     .adcard h2 {
@@ -80,7 +80,7 @@
     }
 
     .form {
-        @apply text-center bg-gray-400 shadow-lg p-2 m-8 rounded-xl text-xl
+        @apply text-center bg-gray-400 shadow-lg p-2 m-8 rounded-xl text-xl bg-opacity-80
     }
 
     .form-input {
@@ -92,7 +92,7 @@
     }
 
     .main-btn {
-        @apply p-0.5 bg-green-400 rounded-sm outline-none mt-6
+        @apply bg-green-400 rounded-md outline-none mt-6 px-1 py-0.5 text-lg
     }
 
     .main-btn:active {
@@ -120,7 +120,7 @@
     }
 
     .pill {
-        @apply m-1 rounded-full py-0.5 px-2 text-sm font-medium w-min whitespace-nowrap uppercase bg-darkWitchPurple text-gray-100 nunito
+        @apply m-1 rounded-full py-0.5 px-2 text-sm font-bold w-min whitespace-nowrap uppercase bg-darkWitchPurple text-gray-100 nunito
     }
 
     .X::before {
@@ -152,4 +152,5 @@
     .title-page-sub {
         @apply text-xl mt-6 text-center bg-white rounded-lg p-3 bg-opacity-50 mx-2 shadow-md dark:bg-opacity-50
     }
+
 }

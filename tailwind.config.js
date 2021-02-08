@@ -6,7 +6,8 @@ module.exports = {
       fontFamily: {
         'delius': ['delius', 'sans-serif'],
         'lemonada': ['lemonada', 'sans-serif'],
-        'nunito': ['nunito', 'sans-serif']
+        'nunito': ['nunito', 'sans-serif'],
+        'merienda':['merienda', 'sans-serif']
       },
       backgroundColor: theme => ({
         ...theme('colors'),

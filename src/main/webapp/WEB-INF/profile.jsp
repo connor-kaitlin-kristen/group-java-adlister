@@ -11,7 +11,7 @@
     <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1 class="lemonada">Welcome, ${sessionScope.user.username}!</h1>
+        <h1 class="lemonada text-xl text-bold p-1.5 dark:text-gray-200">Welcome, ${sessionScope.user.username}!</h1>
     </div>
     <div class="grid grid-cols-12 gap-1 mx-1">
         <c:forEach var="ad" items="${sessionScope.userAds}">
@@ -29,7 +29,7 @@
         </div>
         </c:forEach>
     </div>
-    <a href="/edit">Edit Profile</a>
+    <a href="/edit" class="dark:text-gray-200">Edit Profile</a>
 </body>
 <script src="../js/index.js"></script>
 </html>

@@ -11,7 +11,7 @@
 <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="form">
-        <h1>Create a new Ad</h1>
+        <h1 class="merienda dark:text-gray-800 text-xl">Create a new Ad</h1>
         <form action="/ads/create" method="post">
             <div class="input-wrapper">
                 <label for="title" class="labels">Title</label>
