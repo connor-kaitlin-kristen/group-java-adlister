@@ -127,4 +127,14 @@
         transition: left 300ms ease-in-out;
     }
 
+    .title-page {
+        font-family: Merienda, cursive;
+        @apply text-5xl h-full flex flex-col items-center justify-center text-center
+    }
+
+    .title-page-sub {
+        font-family: sans-serif;
+        @apply text-xl mt-6 text-center
+    }
+
 }
