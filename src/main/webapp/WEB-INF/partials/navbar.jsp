@@ -13,21 +13,22 @@
             </div>
         </div>
         <div id="searchBar" class="cursor-pointer mt-2 sm:mt-0 flex items-center">
-            <span class="material-icons ">search</span>
-            <span class="hidden sm:inline">|</span>
+            <span class="material-icons navlink">search</span>
+            <img class="h-5 px-1" src="../../img/line.png" alt="separatingline">
+        <%--            <span class="hidden sm:inline text-2xl font-semibold">|</span>--%>
         </div>
         <ul class="flex items-center flex-col sm:flex-row inline-block">
-            <li><a class="navlink" href="/login">LOGIN</a></li>
+            <li><a class="navlink merienda" href="/login">Login</a></li>
             <c:if test="${sessionScope.user != null}">
-                <li><a class="navlink" href="/logout">LOGOUT</a></li>
+                <li><a class="navlink merienda" href="/logout">Logout</a></li>
             </c:if>
             <c:if test="${sessionScope.user == null}">
-                <li><a class="navlink" href="/register">REGISTER</a></li>
+                <li><a class="navlink merienda" href="/register">Register</a></li>
             </c:if>
             <c:if test="${sessionScope.user != null}">
-                <li><a class="navlink" href="/ads/create">CREATE</a></li>
+                <li><a class="navlink merienda" href="/ads/create">Create</a></li>
             </c:if>
-            <li><a class="navlink" href="/ads">VIEW ALL</a></li>
+            <li><a class="navlink merienda" href="/ads">View Listings</a></li>
         </ul>
     </div>
 </nav>

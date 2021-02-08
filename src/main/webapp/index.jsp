@@ -19,7 +19,7 @@
                 <br>
             <h2>Click on ‘View All’ to browse currently-listed ads and find the perfect item for you. Register an account and login to post your own ads.</h2>
                 <br>
-            <h4>Happy Hexing!</h4>
+            <h4 class="merienda">Happy Hexing!</h4>
         </div>
     </div>
 
