@@ -14,7 +14,7 @@
     <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="title-page">
-        <img class="w-60 mb-3" src="../../img/foster.png" alt="fostercat">
+        <img class="w-60 mb-3" src="../../img/fostergreen-1.png" alt="fostercat">
         <h1 class="dark:text-gray-200">Welcome to the Hexlister, Witches!</h1>
         <div class="title-page-sub">
             <h2 class="nunito font-semibold">From spell books to familiars, HexLister has plenty of offers to help you and your inner witch.</h2>
