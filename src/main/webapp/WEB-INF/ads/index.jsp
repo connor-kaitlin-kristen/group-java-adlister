@@ -25,5 +25,5 @@
 </div>
 
 </body>
-<script src="../js/hamburger.js"></script>
+<script src="../js/index.js"></script>
 </html>
