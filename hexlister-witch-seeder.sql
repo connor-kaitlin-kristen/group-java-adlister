@@ -1,5 +1,8 @@
 use hexlister_db;
 
+SET FOREIGN_KEY_CHECKS=0;
+
+TRUNCATE users;
 insert into users (password, username, email) values ('$2a$13$7cDRxhAOBV6VOOWi5O7O0Od5Pns43GDf5AR7czY9C13vwLOwpzG9S', 'Queen Beryl', 'sailor@moon.com');
 insert into users (password, username, email) values ('$2a$13$4BBRV3r8VwPOwJ/scSpKAe6WlOolqbO5Y2G6wN.5XGT9exKCQ8BpG', 'Della', 'sabrina@tw.com');
 insert into users (password, username, email) values ('$2a$13$VqE37TSOZwiPVUqGGxpRMOB55Y9A6YH9OVI/wCmEjIZU7ZYOyKd5S', 'Enchantra', 'sabrina2@tw.com');
@@ -20,3 +23,5 @@ insert into users (password, username, email) values ('$2a$13$6BSoZz09NY.KO5/9pb
 insert into users (password, username, email) values ('$2a$13$ynjAe4lDsEgk/L.XaM9b/uU98kL.v1GwWLgm3tvS1ju//JYtxnLMe', 'Melisandre', 'smokebaby@redpriestess.com');
 insert into users (password, username, email) values ('$2a$13$RtmdfscHdQO6nM/KWLVsBuhOsf2IoQ9uMNe50AbbPxLuv.a3AxZ5O', 'Madam Mim', 'madmadmadmadmadammim@ihatesunshine.com');
 insert into users (password, username, email) values ('$2a$13$eyCYO1N9kHG9ZENqW7kjBOOnd/XiESgdhQUMmJB2KKFE3GpCkTCA.', 'Baba Yaga', 'chickenleghut@bonylegged.com');
+
+SET FOREIGN_KEY_CHECKS=1;
