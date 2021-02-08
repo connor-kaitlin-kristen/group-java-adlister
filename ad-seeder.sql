@@ -3,6 +3,7 @@ USE hexlister_db;
 SET FOREIGN_KEY_CHECKS=0;
 
 TRUNCATE ads;
+TRUNCATE ad_category;
 
 INSERT INTO ads (user_id, title, description) VALUES (20, 'Hut for Sale', 'Has two working chicken legs, runs fast!');
 INSERT INTO ads (user_id, title, description) VALUES (10, 'Need more buttons', 'In search of buttons to use for eyes. Must be unsettling. Do not need to match.');
