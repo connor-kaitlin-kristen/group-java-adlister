@@ -27,6 +27,14 @@
         font-family: 'Merienda', cursive;
     }
 
+    .lemonada {
+        font-family: 'Lemonada', cursive;
+    }
+
+    .nunito {
+        font-family: 'Nunito', sans-serif;
+    }
+
     .bar {
         @apply w-full py-0.5 bg-yellow-400 inline-block relative
     }
@@ -60,16 +68,15 @@
     }
 
     .adcard {
-        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-darkGreen bg-opacity-70 rounded-md flex flex-col justify-between dark:text-gray-400
+        @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-codeupGreen bg-opacity-70 rounded-md flex flex-col justify-between dark:text-gray-400
     }
 
     .adcard h2 {
-        font-family: Merienda, cursive;
-        @apply p-1 text-xl font-medium
+        @apply p-1 text-xl font-medium merienda
     }
 
     .adcard p {
-        @apply px-1 my-1
+        @apply px-1 my-1 nunito text-lg
     }
 
     .form {
@@ -97,7 +104,7 @@
     }
 
     .labels {
-        @apply block
+        @apply block nunito
     }
 
     .input-wrapper {
@@ -113,7 +120,7 @@
     }
 
     .pill {
-        @apply m-1 rounded-full bg-purple-400 py-1 px-3 font-medium w-min whitespace-nowrap uppercase bg-witchPurple
+        @apply m-1 rounded-full py-0.5 px-2 text-sm font-medium w-min whitespace-nowrap uppercase bg-darkWitchPurple text-gray-100 nunito
     }
 
     .X::before {
@@ -143,7 +150,6 @@
     }
 
     .title-page-sub {
-        font-family: sans-serif;
-        @apply text-xl mt-6 text-center bg-white rounded-lg p-3 bg-opacity-30 mx-2 shadow-md dark:bg-opacity-50
+        @apply text-xl mt-6 text-center bg-white rounded-lg p-3 bg-opacity-50 mx-2 shadow-md dark:bg-opacity-50
     }
 }

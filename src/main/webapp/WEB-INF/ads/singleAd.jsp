@@ -11,6 +11,7 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing one Ad" />
     </jsp:include>
@@ -25,6 +26,7 @@
         <span class="pill">${category}</span>
     </c:forEach>
     <c:if test="${sessionScope.user != null && sessionScope.user.id == ad.userId}">
+        <a href="/ad/edit/${ad.id}">Edit?</a>
         <a href="/ad/delete/${ad.id}">Delete</a>
     </c:if>
 </div>
