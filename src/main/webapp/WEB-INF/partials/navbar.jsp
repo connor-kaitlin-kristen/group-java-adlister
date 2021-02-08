@@ -6,7 +6,7 @@
         <div class="flex justify-between sm:m-0 mt-1 w-full sm:w-min">
             <div class="flex items-center">
                 <img class="w-8" src="../../img/foster.png" alt="fostercat">
-                <a class="siteLogo" href="/">HexLister</a>
+                <a class="siteLogo delius" href="/">HEXLISTER</a>
             </div>
             <div id="hamburger" class="mr-1 w-8 h-7 flex items-center sm:hidden">
                 <span class="bar"></span>

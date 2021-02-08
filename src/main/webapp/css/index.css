@@ -15,74 +15,112 @@
 }
 
 @layer components {
+    .delius {
+        font-family: 'Delius Unicase', cursive;
+    }
+
     .bar {
         @apply w-full py-0.5 bg-yellow-400 inline-block relative
     }
+
     .bar::before {
         content: "";
         position: absolute;
         top: -7px;
         @apply w-full py-0.5 bg-yellow-400 inline-block
     }
+
     .bar::after {
         content: "";
         position: absolute;
         top: 7px;
         @apply w-full py-0.5 bg-yellow-400 inline-block
     }
+
     .navlink {
-        @apply p-0.5 inline-block mx-1 my-1 border-2 border-white
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        @apply p-0.5 inline-block mx-1 my-1 rounded-md cursor-pointer outline-none
     }
+
+    .navlink:hover {
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+        color: #fff;
+        transform: translateY(-3px);
+        @apply bg-green-700
+    }
+
     .adcard {
         @apply col-span-full md:col-span-6 lg:col-span-4 xl:col-span-3 bg-green-300 rounded-md
     }
+
     .adcard h2 {
         @apply p-1 text-xl font-medium
     }
+
     .adcard p {
         @apply px-1 my-1
     }
+
     .form-input {
         @apply bg-purple-200 rounded-sm py-0.5 px-1 w-11/12 max-w-xl
     }
+
     .form-input:focus {
         @apply bg-purple-100 outline-none ring ring-purple-700
     }
+
     .main-btn {
         @apply p-0.5 bg-green-400 rounded-sm outline-none mt-6
     }
+
     .main-btn:active {
         @apply transform ring ring-green-700 scale-90
     }
+
     .main-btn:hover {
         @apply bg-green-300
     }
+
     .form {
-       @apply text-center bg-gray-400 shadow-lg p-2 m-8 rounded-xl text-xl
+        @apply text-center bg-gray-400 shadow-lg p-2 m-8 rounded-xl text-xl
     }
+
     .labels {
         @apply block
     }
+
     .input-wrapper {
         @apply my-3
     }
+
     .nav-search {
-       @apply outline-none bg-white rounded-sm py-0.5 px-1 inline-block text-gray-900
+        @apply outline-none bg-white rounded-sm py-0.5 px-1 inline-block text-gray-900
     }
+
     .nav-search:focus {
         @apply transform ring ring-1 scale-110 ring-gray-500
     }
+
     .pill {
         @apply m-1 rounded-full bg-purple-400 py-1.5 px-3 font-medium
     }
+
     .X::before {
         content: "";
         @apply inline-block py-0.5 w-full bg-green-300 absolute top-0 transform rotate-90
     }
+
     .X {
         @apply inline-block py-0.5 w-full bg-green-300 relative transform -rotate-45
     }
+
     a.siteLogo {
-        @apply ml-1 mt-0 text-3xl text-gray-300 font-semibold
+        @apply ml-1 mt-0 text-2xl text-gray-300
     }
+
+    .center {
+        @apply h-full flex items-center justify-center
+    }
+
 }
