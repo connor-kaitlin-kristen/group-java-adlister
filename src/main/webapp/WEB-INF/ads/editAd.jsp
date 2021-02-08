@@ -13,13 +13,14 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
+    <link rel="stylesheet" href="../../css/tailwind.css">
     <title>Title</title>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/searchOverlay.jsp" />
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="form">
-    <form action="/ad/edit/${ad.id}" method="post" class="form">
+    <form action="/ad/edit/${ad.id}" method="post">
         <div class="input-wrapper">
             <label for="title" class="labels">Title</label>
             <input id="title" name="title" class="form-input" type="text" value="${ad.title}">
